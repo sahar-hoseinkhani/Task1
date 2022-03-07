@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Task</string>
+    <string name="search">Search</string>
+    <string name="choose_date">Choose Date</string>
+    <string name="destination">Destination</string>
+    <string name="from">From</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="description">Here to help keep you on the move. Where do you want to travel?</string>
+    <string name="let_s_go">Let\'s go</string>
+    <string name="top_users">Top Users</string>
+</resources>
