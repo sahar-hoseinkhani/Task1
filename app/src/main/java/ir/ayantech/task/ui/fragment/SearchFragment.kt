@@ -43,6 +43,7 @@ class SearchFragment : BaseFragment() {
                 requireContext(),
                 { view, year, monthOfYear, dayOfMonth ->
                     binding.dateTv.text = "$dayOfMonth/$monthOfYear/$year"
+                    checkButtonEnableStatus()
                 },
                 calendar.get(Calendar.YEAR),
                 calendar.get(Calendar.MONTH),
@@ -66,7 +67,7 @@ class SearchFragment : BaseFragment() {
     private fun checkButtonEnableStatus() {
         binding.searchBtn.isEnabled = binding.destinationEt.text.toString().isNotEmpty() &&
                 binding.fromEt.text.toString().isNotEmpty() &&
-                binding.dateTv.text.toString().isNotEmpty()
+                binding.dateTv.text.isNotEmpty()
     }
 
     override fun onDestroyView() {
