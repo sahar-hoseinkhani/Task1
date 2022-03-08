@@ -80,12 +80,16 @@ class FirstFragment : BaseFragment() {
 
         binding.goBtn.setOnClickListener {
             hideKeyboard()
-            val bundle = bundleOf("destination" to binding.destinationEt.text.toString())
-            activity?.supportFragmentManager?.commit {
-                setReorderingAllowed(true)
-                addToBackStack("second")
-                add<SearchFragment>(R.id.mainContainer, args = bundle)
-            }
+            showSearchFragment()
+        }
+    }
+
+    private fun showSearchFragment() {
+        val bundle = bundleOf("destination" to binding.destinationEt.text.toString())
+        activity?.supportFragmentManager?.commit {
+            setReorderingAllowed(true)
+            addToBackStack("second")
+            add<SearchFragment>(R.id.mainContainer, args = bundle)
         }
     }
 
